@@ -1,0 +1,198 @@
+/* Glassmorphism Portfolio Design */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    line-height: 1.6;
+    color: #E9F5EC;
+    min-height: 100vh;
+    background: #081C15;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: 
+        linear-gradient(
+            to bottom,
+            rgba(8,28,21,0) 60%,
+            #081C15 100%
+        ),
+        url('images/background.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+}
+
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 300;
+    color: #ffffff;
+}
+
+.tagline {
+    font-size: 1.5rem;
+    color: rgba(255,255,255,0.9);
+    font-style: italic;
+}
+
+/* Main Content */
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #081C15;
+    min-height: 100vh;
+}
+
+/* Glass Cards */
+.glass-card {
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 40px;
+    margin: 40px auto;
+    max-width: 900px;
+    transition: transform 0.3s ease;
+    color: #E9F5EC;
+}
+
+.glass-card:hover {
+    transform: translateY(-2px);
+}
+
+/* Typography */
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #E9F5EC;
+    border-bottom: 2px solid rgba(233,245,236,0.3);
+    padding-bottom: 0.5rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+    margin: 1rem 0 0.5rem 0;
+    color: #E9F5EC;
+}
+
+p {
+    margin-bottom: 1rem;
+    color: rgba(233,245,236,0.9);
+}
+
+/* Links */
+a {
+    color: #74C69D;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #40916C;
+    text-decoration: underline;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.skill-category {
+    background: rgba(255,255,255,0.08);
+    padding: 1.5rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.15);
+    text-align: center;
+}
+
+.skill-category h3 {
+    color: #E9F5EC;
+    margin-bottom: 0.5rem;
+}
+
+.skill-category p {
+    color: rgba(233,245,236,0.8);
+    margin: 0;
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.project-card {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.15);
+    padding: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+}
+
+.project-card h3 {
+    color: #E9F5EC;
+    margin-bottom: 1rem;
+}
+
+.project-card p {
+    color: rgba(233,245,236,0.9);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .tagline {
+        font-size: 1.2rem;
+    }
+    
+    .hero-card {
+        padding: 40px;
+        margin: 1rem;
+    }
+    
+    .glass-card {
+        padding: 30px;
+        margin: 20px auto;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
