@@ -9,9 +9,9 @@
 body {
     font-family: "Segoe UI", sans-serif;
     line-height: 1.6;
-    color: #E9F5EC;
+    color: #ECFDF5;
     min-height: 100vh;
-    background: #081C15;
+    background: #021a16;
     margin: 0;
     padding: 0;
 }
@@ -22,8 +22,8 @@ body {
     background: 
         linear-gradient(
             to bottom,
-            rgba(8,28,21,0) 60%,
-            #081C15 100%
+            rgba(2,26,22,0) 60%,
+            #021a16 100%
         ),
         url('images/background.jpg') center/cover no-repeat;
     display: flex;
@@ -36,16 +36,17 @@ body {
 
 
 .hero h1 {
-    font-size: 3.5rem;
+    font-size: 4.0rem;
     margin-bottom: 1rem;
-    font-weight: 300;
+    font-weight: 700;
     color: #ffffff;
 }
 
 .tagline {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: rgba(255,255,255,0.9);
     font-style: italic;
+    font-weight: 500;
 }
 
 /* Main Content */
@@ -53,57 +54,64 @@ main {
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
-    background: #081C15;
+    background: #021a16;
     min-height: 100vh;
 }
 
 /* Glass Cards */
 .glass-card {
-    background: rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.08);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-radius: 20px;
-    border: 1px solid rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.15);
     padding: 40px;
     margin: 40px auto;
     max-width: 900px;
     transition: transform 0.3s ease;
-    color: #E9F5EC;
+    color: #ECFDF5;
 }
 
 .glass-card:hover {
     transform: translateY(-2px);
 }
 
+/* No Card Sections */
+.no-card {
+    padding: 40px;
+    margin: 40px auto;
+    max-width: 900px;
+}
+
 /* Typography */
 h2 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
-    color: #E9F5EC;
-    border-bottom: 2px solid rgba(233,245,236,0.3);
+    color: #ECFDF5;
+    border-bottom: 2px solid rgba(236,253,245,0.3);
     padding-bottom: 0.5rem;
 }
 
 h3 {
     font-size: 1.3rem;
     margin: 1rem 0 0.5rem 0;
-    color: #E9F5EC;
+    color: #ECFDF5;
 }
 
 p {
     margin-bottom: 1rem;
-    color: rgba(233,245,236,0.9);
+    color: rgba(236,253,245,0.9);
 }
 
 /* Links */
 a {
-    color: #74C69D;
+    color: #4ADE80;
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
 a:hover {
-    color: #40916C;
+    color: #86EFAC;
     text-decoration: underline;
 }
 
@@ -124,12 +132,12 @@ a:hover {
 }
 
 .skill-category h3 {
-    color: #E9F5EC;
+    color: #ECFDF5;
     margin-bottom: 0.5rem;
 }
 
 .skill-category p {
-    color: rgba(233,245,236,0.8);
+    color: rgba(236,253,245,0.8);
     margin: 0;
 }
 
@@ -156,12 +164,12 @@ a:hover {
 }
 
 .project-card h3 {
-    color: #E9F5EC;
+    color: #ECFDF5;
     margin-bottom: 1rem;
 }
 
 .project-card p {
-    color: rgba(233,245,236,0.9);
+    color: rgba(236,253,245,0.9);
 }
 
 /* Responsive Design */
