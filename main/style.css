@@ -40,6 +40,12 @@ body {
     margin-bottom: 1rem;
     font-weight: 700;
     color: #ffffff;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.hero h1:hover {
+    transform: translateY(-8px);
 }
 
 .tagline {
@@ -47,6 +53,24 @@ body {
     color: rgba(255,255,255,0.9);
     font-style: italic;
     font-weight: 500;
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.tagline::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #4ADE80;
+    transition: width 0.3s ease;
+}
+
+.tagline:hover::after {
+    width: 100%;
 }
 
 /* Main Content */
@@ -122,6 +146,38 @@ main {
     text-align: right;
 }
 
+/* Movie Section */
+.movie-section {
+    max-width: 1200px;
+}
+
+.movie-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.movie-text {
+    flex: 1;
+    text-align: left;
+}
+
+.movie-cover {
+    flex: 0 0 300px;
+}
+
+.movie-cover img {
+    width: 100%;
+    height: auto;
+    transform: rotate(10deg);
+    transition: transform 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.movie-cover img:hover {
+    transform: rotate(5deg);
+}
+
 /* Typography */
 h2 {
     font-size: 2rem;
@@ -162,7 +218,7 @@ p {
     padding-left: 10px;
 }
 
-p:hover {
+p:not(.tagline):hover {
     border-left: 3px solid #4ADE80;
 }
 
@@ -233,6 +289,87 @@ a:hover {
 
 .project-card p {
     color: rgba(236,253,245,0.9);
+}
+
+/* Projects Showcase */
+.projects-showcase {
+    max-width: 1200px;
+    margin: 60px auto;
+    display: flex;
+    gap: 4rem;
+    align-items: flex-start;
+}
+
+.projects-title {
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: rgba(236,253,245,0.3);
+    letter-spacing: 0.2em;
+    flex-shrink: 0;
+}
+
+.projects-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.project-item {
+    transition: all 0.3s ease;
+}
+
+.project-item:hover {
+    opacity: 1 !important;
+    transform: translateY(-6px) scale(1.05) !important;
+    filter: blur(0) !important;
+}
+
+.project-item .project-card {
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.25);
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.project-item .project-card:hover {
+    transform: translateY(-6px) scale(1.05);
+}
+
+.project-item .project-card h3 {
+    color: #ECFDF5;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.project-item .project-card p {
+    color: rgba(236,253,245,0.9);
+    margin: 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .projects-showcase {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .projects-title {
+        writing-mode: horizontal-tb;
+        text-orientation: mixed;
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    
+    .projects-list {
+        gap: 1.5rem;
+    }
 }
 
 /* Footer Hero Section */
