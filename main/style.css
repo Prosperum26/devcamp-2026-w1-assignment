@@ -111,7 +111,7 @@ main {
 .no-card {
     padding: 40px;
     margin: 40px auto;
-    max-width: 900px;
+    max-width: 1200px;
 }
 
 /* Book Section */
@@ -240,6 +240,94 @@ a:hover {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
     margin-top: 1rem;
+}
+
+/* Tech Stack Horizontal Scroll */
+.tech-scroll-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 2rem;
+    padding: 1rem 0;
+}
+
+/* Edge fade effect */
+.tech-scroll-container::before,
+.tech-scroll-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 60px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.tech-scroll-container::before {
+    left: 0;
+    background: linear-gradient(to right, #021a16, transparent);
+}
+
+.tech-scroll-container::after {
+    right: 0;
+    background: linear-gradient(to left, #021a16, transparent);
+}
+
+.tech-scroll {
+    display: flex;
+    gap: 1rem;
+    animation: scroll-horizontal 20s linear infinite;
+}
+
+.tech-scroll-container:hover .tech-scroll {
+    animation-play-state: paused;
+}
+
+.tech-item-scroll {
+    flex-shrink: 0;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 12px;
+    padding: 0.8rem 1.2rem;
+    color: #ECFDF5;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.tech-item-scroll:hover {
+    background: rgba(255,255,255,0.12);
+    border-color: rgba(255,255,255,0.25);
+    transform: scale(1.05);
+    color: #4ADE80;
+}
+
+@keyframes scroll-horizontal {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .tech-scroll {
+        gap: 0.5rem;
+    }
+    
+    .tech-item-scroll {
+        padding: 0.6rem 1rem;
+        font-size: 0.8rem;
+    }
+    
+    .tech-scroll-container::before,
+    .tech-scroll-container::after {
+        width: 40px;
+    }
 }
 
 .skill-category {
