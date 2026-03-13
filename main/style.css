@@ -54,7 +54,14 @@ main {
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
-    background: #021a16;
+    background: 
+        linear-gradient(
+            to bottom,
+            #021a16 0%,
+            #021a16 80%,
+            rgba(2,26,22,0.8) 90%,
+            rgba(2,26,22,0.4) 100%
+        );
     min-height: 100vh;
 }
 
@@ -81,6 +88,38 @@ main {
     padding: 40px;
     margin: 40px auto;
     max-width: 900px;
+}
+
+/* Book Section */
+.book-section {
+    max-width: 1200px;
+}
+
+.book-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.book-cover {
+    flex: 0 0 300px;
+}
+
+.book-cover img {
+    width: 100%;
+    height: auto;
+    transform: rotate(-10deg);
+    transition: transform 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.book-cover img:hover {
+    transform: rotate(-25deg);
+}
+
+.book-text {
+    flex: 1;
+    text-align: right;
 }
 
 /* Typography */
@@ -170,6 +209,41 @@ a:hover {
 
 .project-card p {
     color: rgba(236,253,245,0.9);
+}
+
+/* Footer Hero Section */
+.footer-hero {
+    height: 100vh;
+    background: 
+        linear-gradient(
+            to bottom,
+            #021a16 0%,
+            rgba(2,26,22,0.4) 40%,
+            rgba(2,26,22,0) 100%
+        ),
+        url('images/background1.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+}
+
+.footer-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    border: none;
+    padding: 0;
+}
+
+.footer-content p {
+    font-size: 1.5rem;
+    color: rgba(255,255,255,0.9);
+    font-style: italic;
+    font-weight: 500;
 }
 
 /* Responsive Design */
