@@ -129,6 +129,24 @@ h2 {
     color: #ECFDF5;
     border-bottom: 2px solid rgba(236,253,245,0.3);
     padding-bottom: 0.5rem;
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #4ADE80;
+    transition: width 0.3s ease;
+}
+
+h2:hover::after {
+    width: 100%;
 }
 
 h3 {
@@ -140,6 +158,12 @@ h3 {
 p {
     margin-bottom: 1rem;
     color: rgba(236,253,245,0.9);
+    transition: all 0.25s ease;
+    padding-left: 10px;
+}
+
+p:hover {
+    border-left: 3px solid #4ADE80;
 }
 
 /* Links */
