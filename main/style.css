@@ -178,6 +178,85 @@ main {
     transform: rotate(5deg);
 }
 
+/* AI Corner Section */
+.ai-corner {
+    max-width: 1200px;
+}
+
+.ai-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    position: relative;
+    min-height: 300px;
+}
+
+.ai-logo {
+    flex-shrink: 0;
+    width: 120px;
+    height: 120px;
+    margin-top: 0.5rem;
+    opacity: 0.15;
+    filter: blur(0.5px);
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 0;
+}
+
+.ai-logo img {
+    width: 100%;
+    height: auto;
+    transition: all 0.3s ease;
+}
+
+.ai-logo img:hover {
+    opacity: 0.3;
+    filter: blur(0.3px);
+    transform: scale(1.1);
+}
+
+.ai-text {
+    flex: 1;
+    text-align: center;
+}
+
+.ai-text h2 {
+    margin-bottom: 2rem;
+}
+
+.ai-text p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 1rem auto;
+}
+
+.ai-image {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    width: 180px;
+    height: auto;
+    opacity: 0.3;
+    filter: blur(1px);
+}
+
+.ai-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    transform: rotate(8deg);
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.ai-image img:hover {
+    opacity: 0.6;
+    filter: blur(0.5px);
+    transform: rotate(5deg) scale(1.05);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.3);
+}
+
 /* Typography */
 h2 {
     font-size: 2rem;
