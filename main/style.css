@@ -502,12 +502,60 @@ a:hover {
         width: 40px;
     }
     
+    .book-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
     .book-cover {
         flex: 0 0 200px;
+        order: 2;
+    }
+    
+    .book-text {
+        text-align: center;
+        order: 1;
+    }
+    
+    .movie-content {
+        flex-direction: column;
+        gap: 2rem;
     }
     
     .movie-cover {
         flex: 0 0 200px;
+        order: 2;
+    }
+    
+    .movie-text {
+        text-align: center;
+        order: 1;
+    }
+    
+    .ai-content {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .ai-logo {
+        position: static;
+        width: 80px;
+        height: 80px;
+        order: 2;
+        margin-top: 1rem;
+    }
+    
+    .ai-text {
+        order: 1;
+    }
+    
+    .ai-image {
+        position: static;
+        width: 150px;
+        order: 3;
+        margin-top: 1rem;
     }
     
     .projects-showcase {
